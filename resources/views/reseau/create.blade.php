@@ -3,7 +3,7 @@
 <title>@yield('title', 'Création réseau')</title>
 <br>
 @section('content')
-<br><div class="bg-light border p-3" style="width: 50%; border-radius:10%;">
+<br><div class="bg-white " style="width: 50%; border-radius:10%;">
   <h2>Création</h2>
   <form action="{{ route('reseau.store') }}" method="post"  class="btn btn-p-3 mb-2 bg-dark text-white">
 

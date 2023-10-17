@@ -3,7 +3,7 @@
 <title>@yield('title', 'Modifier serveur')</title>
 
 @section('content')
-<br><div class="bg-light border p-3" style="width: 50%; border-radius:10%;">
+<br><div class="bg-light" style="width: 50%; border-radius:10%;">
   <h2>Mise à jour</h2>
   <form action="{{ route('serveur.update', ['serveur' => $serveur->id]) }}" method="post">
 
