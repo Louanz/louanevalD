@@ -15,16 +15,13 @@ class Locale
      */
     public function handle(Request $request, Closure $next): Response
     {
+        if (!session ()->has ('locale')) {
+            session (['locale' => $request->getPreferredLanguage (config ('app.locales'))]);
+        }
+        $locale = session ('locale');
+        app ()->setLocale ($locale);
+        setlocale (LC_TIME, app()->environment('local') ? $locale : config('locale.languages')[$locale][1]);
         return $next($request);
-{
-    if (!session ()->has ('locale')) {
-        session (['locale' => $request->getPreferredLanguage (config ('app.locales'))]);
-    }
-    $locale = session ('locale');
-    app ()->setLocale ($locale);
-    setlocale (LC_TIME, app()->environment('local') ? $locale : config('locale.languages')[$locale][1]);
-    return $next ($request);
-}
 
     }
 }
