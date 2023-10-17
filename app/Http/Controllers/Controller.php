@@ -2,6 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Repositories\OrdinateurRepository;
+use App\Repositories\ServeurRepository;
+use App\Repositories\ReseauRepository;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Routing\Controller as BaseController;
@@ -10,11 +13,22 @@ class Controller extends BaseController
 {
     use AuthorizesRequests, ValidatesRequests;
 
-    // if (Auth::user()->can('')) {
-        // return view('auth.php', compact(''));
-        // }
+    protected $ordinateurRepository;
+    protected $serveurRepository;
+    protected $reseauRepository;
 
-        // abort(401);
+    public function __construct(
+        OrdinateurResitory $ordinateurRepository,
+        ServeurResitory $serveurRepository,
+        ReseauRepository $reseauRepository
+    ){
+        $this->ordinateurRepository = $ordinateurRepository;
+        $this->serveurRepository = $serveurRepository;
+        $this->reaseauRepository = $reseauRepository;
+
+    }
+
+
 }
 
 

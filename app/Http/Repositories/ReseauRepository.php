@@ -30,14 +30,18 @@ class ReseauRepository
 
     public function create(array $data)
     {
-        (Auth::user()->hasRole('administrateur') && Auth::user()->can('gestion de reseaux'));
+        if (Auth::user()->hasRole('administrateur') && Auth::user()->can('gestion de reseaux')){
+            abort(403);
+        }
 
     }
 
 
     public function update(Reseau $serveur, array $inputs)
     {
-        (Auth::user()->hasRole('administrateur') && Auth::user()->can('gestion de reseaux '));
+        if (Auth::user()->hasRole('administrateur') && Auth::user()->can('gestion de reseaux ')){
+            abort(403);
+        }
         return $this->save($serveur, $inputs);
     }
 }

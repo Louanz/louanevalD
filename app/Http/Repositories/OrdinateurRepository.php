@@ -31,14 +31,20 @@ class OrdinateurRepository
 
     public function create(array $data)
     {
-        (Auth::user()->hasRole('technicien') && Auth::user()->can('gestion des serveurs'));
+        if (Auth::user()->hasRole('technicien') && Auth::user()->can('gestion des serveurs')){
+            abort(403);
+        }
 
     }
 
 
     public function update(Ordinateur $serveur, array $inputs)
     {
-        (Auth::user()->hasRole('technicien') && Auth::user()->can('gestion des serveurs'));
+        if (Auth::user()->hasRole('technicien') && Auth::user()->can('gestion des serveurs')){
+            abort(403);
+        }
+
+
         return $this->save($serveur, $inputs);
     }
 }

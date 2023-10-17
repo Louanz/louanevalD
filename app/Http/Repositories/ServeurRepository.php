@@ -31,19 +31,22 @@ class ServeurRepository
 
     public function create(array $data)
     {
-        (Auth::user()->hasRole('technicien') && Auth::user()->can('gestion des serveurs'));
+        (Auth::user()->hasRole('technicien') && Auth::user()->can('gestion des serveurs')){
+            abort(403);
+        }
 
     }
 
 
     public function update(Serveur $serveur, array $inputs)
     {
-        (Auth::user()->hasRole('technicien') && Auth::user()->can('gestion des serveurs'));
+        if (Auth::user()->hasRole('technicien') && Auth::user()->can('gestion des serveurs')){
+            abort(403);
+        }
         return $this->save($serveur, $inputs);
     }
 
 
-    }
-
-
 }
+
+
