@@ -21,16 +21,23 @@ class ReseauRepository
         return $reseau;
     }
 
-    public function store(array $inputs)
+   public function store(array $inputs)
     {
-        $reseau = new $this->reseau;
-        return $this->save($reseau, $inputs);
+        $serveur = new $this->serveur;
+        return $this->save($serveur, $inputs);
+
     }
 
-    public function update(Reseau $reseau, array $inputs)
+    public function create(array $data)
     {
-        return $this->save($reseau, $inputs);
+        (Auth::user()->hasRole('administrateur') && Auth::user()->can('gestion de reseaux'));
+
     }
 
 
+    public function update(Reseau $serveur, array $inputs)
+    {
+        (Auth::user()->hasRole('administrateur') && Auth::user()->can('gestion de reseaux '));
+        return $this->save($serveur, $inputs);
+    }
 }

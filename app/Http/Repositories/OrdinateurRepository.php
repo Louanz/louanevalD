@@ -22,16 +22,23 @@ class OrdinateurRepository
         return $ordinateur;
     }
 
-    public function store(array $inputs)
+   public function store(array $inputs)
     {
-        $ordinateur = new $this->ordinateur;
-        return $this->save($ordinateur, $inputs);
+        $serveur = new $this->serveur;
+        return $this->save($serveur, $inputs);
+
     }
 
-    public function update(Ordinateur $ordinateur, array $inputs)
+    public function create(array $data)
     {
-        return $this->save($ordinateur, $inputs);
+        (Auth::user()->hasRole('technicien') && Auth::user()->can('gestion des serveurs'));
+
     }
 
 
+    public function update(Ordinateur $serveur, array $inputs)
+    {
+        (Auth::user()->hasRole('technicien') && Auth::user()->can('gestion des serveurs'));
+        return $this->save($serveur, $inputs);
+    }
 }

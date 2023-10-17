@@ -9,7 +9,15 @@ use Illuminate\Routing\Controller as BaseController;
 class Controller extends BaseController
 {
     use AuthorizesRequests, ValidatesRequests;
+
+    // if (Auth::user()->can('')) {
+        // return view('auth.php', compact(''));
+        // }
+
+        // abort(401);
 }
+
+
 
 // public function language(String $locale)
 // {
