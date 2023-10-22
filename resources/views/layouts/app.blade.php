@@ -28,8 +28,8 @@
             <br>
             <div>
                 {{ __('Changer de language :') }} [{{ session('locale') }}] [{{ App::getLocale() }}]
-                <a  class="btn btn-dark mb-2" href="{{ route('language.change', ['code_iso' => 'fr']) }}">{{ __('french') }} </a>
-                <a class="btn btn-dark mb-2" href="{{ route('language.change', ['code_iso' => 'en']) }}">{{ __('english') }}</a>
+                <a  class="btn btn-dark mb-2" href="{{ route('language.change', ['code_iso' => 'fr']) }}">{{ __('francais') }} </a>
+                <a class="btn btn-dark mb-2" href="{{ route('language.change', ['code_iso' => 'en']) }}">{{ __('anglais') }}</a>
             </div>
 
             @auth

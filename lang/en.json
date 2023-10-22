@@ -35,9 +35,9 @@
     "Unauthorized": "Unauthorized",
     "Verify Email Address": "Verify Email Address",
     "Whoops!": "Whoops!",
-    "You are receiving this email because we received a password reset request for your account.": "You are receiving this email because we received a password reset request for your account.",
-    "french": "french",
-    "english":"english",
-    "ll":"Listes des ordinateurs"
+    "francais":"french",
+    "anglais":"english",
+    "Listes des ordinateurs":"Computer Lists",
+    "You are receiving this email because we received a password reset request for your account.": "You are receiving this email because we received a password reset request for your account."
 
 }
