@@ -6,6 +6,7 @@ use App\Http\Controllers\AccueilController;
 use App\Http\Controllers\OrdinateurController;
 use App\Http\Controllers\ServeurController;
 use App\Http\Controllers\ReseauController;
+use App\Http\Controllers\LanguageController;
 
 /*
 |--------------------------------------------------------------------------
@@ -37,6 +38,8 @@ Route::resource('serveur', ServeurController::class);
 Route::resource('reseau', ReseauController::class);
 Route::resource('accueil', AccueilController::class);
 
+
+Route::get('language/{code_iso}', [LanguageController::class, 'change'])->name('language.change');
 
 
 require __DIR__.'/auth.php';
