@@ -44,7 +44,9 @@
     </div><br>
 
     <div>
-      <input type="submit" value="Valider" class="btn btn-success">
+      <input type="submit" value="Valider" class="btn btn-<div>
+        <input type="submit" value="Valider" class="btn btn-p-3 mb-2 bg-white text-dark border">
+        </div>">
     </div>
 
   </form>

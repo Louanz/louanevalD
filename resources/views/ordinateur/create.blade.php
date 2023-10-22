@@ -3,7 +3,7 @@
 <title>@yield('title', 'Création ordinateur')</title>
 <br>
 @section('content')
-<br><div class="bg-light border p-3" style="width: 50%; border-radius:10%;">
+<br><div>
     <h2>Création</h2>
     <form action="{{ route('ordinateur.store') }}" method="post"  class="btn btn-p-3 mb-2 bg-dark text-white" >
 
@@ -41,8 +41,9 @@
         </div><br>
 
         <div>
-            <input type="submit" value="Valider" class="btn btn-success">
-        </div>
+            <input type="submit" value="Valider" class="btn btn-p-3 mb-2 bg-white text-dark border">
+            </div>
+
 
     </form>
 </div>

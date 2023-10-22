@@ -10,6 +10,21 @@ use Illuminate\Http\Request;
 
 class ServeurController extends Controller
 {
+
+    // private $repository;
+
+    // public function __construct(ReseauRepository $repository)
+    // {
+    //     $this->repository = $repository;
+    // }
+
+    // public function index()
+    // {
+    //     $reseau = Reseau::all();
+    //     return view('serveurs.index', compact('serveurs'));
+    // }
+
+
     /**
      * Display a listing of the resource.
      */

@@ -3,13 +3,9 @@
 <title>@yield('title', 'Liste des ordinateurs')</title>
 
 @section('content')
-<<<<<<< HEAD
 <br>
 <br>
 <br><a href="{{ route('ordinateur.create') }}" class="btn btn-p-3 mb-2 bg-dark text-white">Ajouter</a><br><br>
-=======
-<br><a href="{{ route('ordinateur.create') }}" class="btn btn-primary">Ajouter</a><br/><br/>
->>>>>>> da388ad648c8eeec70ce45375976b245bdfa9aa3
 
     @foreach ($ordinateur as $ordinateurs)
     <table class="table table-striped table-bordered">
