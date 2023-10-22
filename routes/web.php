@@ -19,7 +19,7 @@ use App\Http\Controllers\ReseauController;
 */
 
 Route::get('/', function () {
-    return redirect()->route('accueil.index');
+    return view('auth.login');
 });
 
 Route::get('/dashboard', function () {
