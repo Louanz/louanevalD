@@ -11,19 +11,12 @@ use Illuminate\Http\Request;
 class OrdinateurController extends Controller
 {
 
-    // private $repository;
+     private $repository;
 
-    // public function __construct(OrdinateurRepository $repository)
-    // {
-    //     $this->repository = $repository;
-    // }
-
-    // public function index()
-    // {
-    //     $reseau = Reseau::all();
-    //     return view('ordinateurs.index', compact('ordinateurs'));
-    // }
-
+     public function __construct(OrdinateurRepository $repository)
+     {
+         $this->repository = $repository;
+     }
 
     /**
      * Display a listing of the resource.
