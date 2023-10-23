@@ -4,7 +4,7 @@
 
 @section('content')
 
-<br><div class="bg-light border p-3" style="width: 50%; border-radius:10%;">
+<br><div class="bg-light " style="width: 50%; border-radius:10%;">
   <br><h2>Mise à jour</h2>
 
   <form action="{{ route('ordinateur.update', ['ordinateur' => $ordinateur->id]) }}" method="post">

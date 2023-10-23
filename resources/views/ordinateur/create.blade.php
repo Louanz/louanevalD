@@ -3,7 +3,9 @@
 <title>@yield('title', 'Création ordinateur')</title>
 <br>
 @section('content')
-<br><div>
+
+<br><div class="bg-white " style="width: 50%; border-radius:10%;">
+
     <h2>Création</h2>
     <form action="{{ route('ordinateur.store') }}" method="post"  class="btn btn-p-3 mb-2 bg-dark text-white" >
 
