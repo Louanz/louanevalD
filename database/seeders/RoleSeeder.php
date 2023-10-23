@@ -14,16 +14,16 @@ class RoleSeeder extends Seeder
     {
         $bouncer = app(Bouncer::class);
 
-        $bouncer->ability()->firstOrCreate(['name' => '-index']);
-        $bouncer->ability()->firstOrCreate(['name' => '-index']);
-        $bouncer->ability()->firstOrCreate(['name' => '-index']);
+        $bouncer->ability()->firstOrCreate(['name' => 'ordinateur-index']);
+        $bouncer->ability()->firstOrCreate(['name' => 'serveur-index']);
+        $bouncer->ability()->firstOrCreate(['name' => 'reseau-index']);
 
-        $bouncer->role()->firstOrCreate(['name' => '']);
-        $bouncer->role()->firstOrCreate(['name' => '']);
-        $bouncer->role()->firstOrCreate(['name' => '']);
+        $bouncer->role()->firstOrCreate(['name' => 'technicien']);
+        $bouncer->role()->firstOrCreate(['name' => 'administrateur']);
+        //$bouncer->role()->firstOrCreate(['name' => 'Utilisateur']);
 
-        $bouncer->allow('admin')->to('salle-index');
-        $bouncer->allow('user')->to('reserv-index');
-        $bouncer->allow('user')->to('client-index');
+        $bouncer->allow('technicien')->to('ordinateur-index');
+        $bouncer->allow('technicien')->to('serveur-index');
+        $bouncer->allow('administrateur')->to('reseau-index');
     }
 }
