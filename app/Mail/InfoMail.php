@@ -19,9 +19,7 @@ class InfoMail extends Mailable
      * Create a new message instance.
      */
     public function __construct(Ordinateur $ordinateur) { $this->ordinateur = $ordinateur; }
-    {
-        //
-    }
+
 
     /**
      * Get the message envelope.
