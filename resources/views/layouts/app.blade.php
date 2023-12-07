@@ -15,19 +15,20 @@
 </head>
 
 <body>
-    <br>
     <div class="container">
         <nav>
             <div>
-                <a href="{{ route('accueil.index') }}"  class="p-3 mb-2 bg-dark text-white" >{{ __('Accueil')}}</a>
-                <a href="{{ route('ordinateur.index') }}" style="padding: 5px"  class="p-3 mb-2 bg-dark text-white" >{{ __('Listes des ordinateurs')}}</a>
-                <a href="{{ route('serveur.index') }}" style="padding: 5px "  class="p-3 mb-2 bg-dark text-white">{{ __('Listes des serveurs')}}</a>
-                <a href="{{ route('reseau.index') }}" style="padding: 5px " class="p-3 mb-2 bg-dark text-white" >{{ __('Listes des réseaux')}}</a>
+                <a href="{{ route('accueil.index') }}" class="btn btn-outline-dark mb-2" >{{ __('Accueil')}}</a>
+                <a href="{{ route('ordinateur.index') }}" style="padding: 5px"  class="btn btn-outline-dark mb-2" >{{ __('Listes des ordinateurs')}}</a>
+                <a href="{{ route('serveur.index') }}" style="padding: 5px "  class="btn btn-outline-dark mb-2">{{ __('Listes des serveurs')}}</a>
+                <a href="{{ route('reseau.index') }}" style="padding: 5px " class="btn btn-outline-dark mb-2" >{{ __('Listes des réseaux')}}</a>
             </div>
+
+            <br>
             <div>
-                {{-- __('Vous naviguez en') }} [{{ session('locale') }}] [{{ App::getLocale()-- }}]
-                {{-- <a href="{{ route('language.change', ['code_iso' => 'fr']) }}">{{ __('French') }}</a> --}}
-                {{-- <a href="{{ route('language.change', ['code_iso' => 'en']) }}">{{ __('English') }}</a> --}}
+                {{ __('Changer de language :') }} [{{ session('locale') }}] [{{ App::getLocale() }}]
+                <a  class="btn btn-dark mb-2" href="{{ route('language.change', ['code_iso' => 'fr']) }}">{{ __('francais') }} </a>
+                <a class="btn btn-dark mb-2" href="{{ route('language.change', ['code_iso' => 'en']) }}">{{ __('anglais') }}</a>
             </div>
 
             @auth

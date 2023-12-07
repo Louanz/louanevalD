@@ -35,5 +35,19 @@
     "Unauthorized": "Unauthorized",
     "Verify Email Address": "Verify Email Address",
     "Whoops!": "Whoops!",
+    "francais":"french",
+    "anglais":"english",
+    "Listes des ordinateurs":"Computer Lists",
+    "Listes des serveurs":"server lists",
+    "Listes des réseaux":"network lists",
+    "Accueil":"welcome",
+    "Ajouter":"Ad",
+    "Supprimer":"delete",
+    "Modifier":"change",
+    "marque":"brand",
+    "num_serie":"serial_number",
+    "date_service":"service_date",
+
     "You are receiving this email because we received a password reset request for your account.": "You are receiving this email because we received a password reset request for your account."
+
 }
