@@ -31,7 +31,7 @@ class OrdinateurRepositoryTest extends TestCase
 
         $response = $this->get('/');
 
-        $response->assertStatus(2000);
+        $response->assertStatus(200);
 
 
 

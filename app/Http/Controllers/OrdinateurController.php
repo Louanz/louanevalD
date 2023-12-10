@@ -4,11 +4,13 @@ namespace App\Http\Controllers;
 
 use App\Http\Repositories\OrdinateurRepository;
 use App\Http\Requests\OrdinateurRequest;
-use App\Mail\InfoMail;
 use App\Models\Ordinateur;
 use App\Models\Reseau;
 use Illuminate\Http\Request;
 use Mail;
+use App\Mail\InfoMail;
+
+
 
 class OrdinateurController extends Controller
 {
@@ -45,6 +47,11 @@ class OrdinateurController extends Controller
      */
     public function store(Request $request)
     {
+
+        $user=Auth::user()->email
+        Mail::to($user)->send(new InfoMail($ordinateur));
+
+
         $ordinateur = new Ordinateur();
         $ordinateur->num_serie = $request->num_serie;
         $ordinateur->modele = $request->modele;
